@@ -1,0 +1,69 @@
+@import "colores";
+@import "estilo-base";
+
+@mixin borde {
+    
+    border-radius: 20px;
+    background-image: radial-Gradient(center, ellipse, transparent, $naranja-paleta);
+    background-image: -moz-radial-gradient(center, ellipse, transparent, $naranja-paleta);
+    background-image: -webkit-radial-gradient(center, ellipse, transparent, $naranja-paleta);
+    background-image: -moz-radial-gradient(center, ellipse, transparent, $naranja-paleta);
+
+}
+
+main{
+
+    section{
+
+        h1,h2{
+            font-size: 3rem;
+            color: $violeta-paleta;
+
+            &:hover{
+                color: $rosa-paleta;
+            }
+
+        }
+
+        #imgDemostrativa{
+            width: 25%;
+            border-radius: 10%;
+        }
+
+        table{
+
+            tr{
+
+                td{
+                    border-bottom: 1px solid $violeta-paleta;
+                    border-right: 1px solid $violeta-paleta;
+                    border-radius: 20px;
+                    .descripcion{
+                        font-size: 1.75rem;
+                        word-spacing: 0.75rem;
+                    }
+
+                    &:hover{
+                        @include borde;
+                    }
+
+                }
+            } /* fin tr */
+
+        } /* fin table */
+
+        ol:hover{
+
+            @include borde;
+
+        }
+
+        iframe{
+            width: 426; 
+            height: 240;
+            border-radius: 10%;
+        }
+
+    } /* fin section */
+
+} /* fin main */

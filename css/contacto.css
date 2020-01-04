@@ -1,0 +1,509 @@
+@charset "UTF-8";
+/* Contiene los colores usados dentro de todas las hojas de estilo */
+/* Contiene los colores usados dentro de todas las hojas de estilo */
+/* Mixin que encapsola la estructura base de cajas para el header y aside */
+/* fin estructuraCaja */
+/* mixin para las imágenes con links a las redes sociales */
+/* fin imgRedes */
+/* line 45, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html {
+  font-size: 62.5%;
+  /* Deja las unidades REM en 1 rem = 10px aprox */
+  /* fin body */
+}
+
+/* line 48, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body {
+  background-image: url("../res/fondo.jpg");
+  background-attachment: fixed;
+  font-family: 'Lobster', cursive, sans-serif;
+  text-shadow: rgba(0, 0, 0, 0.5) 2px 2px;
+  /* fin div contenedor */
+}
+
+/* line 54, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10%;
+  /* Distribución en grilla de los elementos */
+  justify-self: center;
+  align-self: center;
+  display: grid;
+  grid-template-areas: "header aside" "nav nav" "main main" "footer footer";
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: 3fr 1fr auto 1fr;
+  gap: 10px 5px;
+  /* fin header */
+  /* fin nav */
+  /* fin aside */
+  /* fin footer */
+}
+
+/* line 71, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor header {
+  background-image: radial-Gradient(center, ellipse, transparent, #5B3396);
+  /* Para que soporte a otros navegadores */
+  background-image: -moz-radial-gradient(center, ellipse, transparent, #5B3396);
+  background-image: -webkit-radial-gradient(center, ellipse, transparent, #5B3396);
+  background-image: -o-radial-gradient(center, ellipse, transparent, #5B3396);
+  /* Prpiedades del borde */
+  border-top: groove 5px #5B3396;
+  border-bottom: groove 5px #B9215A;
+  border-left: groove 10px #5B3396;
+  border-right: groove 10px #B9215A;
+  /* Forma y distribución */
+  display: inline-block;
+  border-radius: 5%;
+  justify-content: center;
+  align-items: center;
+  grid-area: header;
+  display: flex;
+}
+
+/* line 76, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor header img {
+  border-radius: 100%;
+  margin: 0.5%;
+}
+
+/* line 83, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor nav {
+  background-color: rgba(119, 186, 203, 0.75);
+  font-size: 2rem;
+  list-style-position: inside;
+  border-radius: 20px;
+  position: sticky;
+  top: 10px;
+  grid-area: nav;
+  align-items: center;
+}
+
+/* line 93, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor nav ul {
+  list-style-type: disc;
+  list-style-position: inside;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* line 101, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor nav ul li {
+  transition: all 2s;
+}
+
+/* line 104, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor nav ul li #linkInicio {
+  color: #B9215A;
+}
+
+/* line 108, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor nav ul li #linkSobreNosotros {
+  color: #77BACB;
+}
+
+/* line 112, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor nav ul li #linkContacto {
+  color: #EBC534;
+}
+
+/* line 116, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor nav ul li #linkServicios {
+  width: 15%;
+  color: #5B3396;
+}
+
+/* line 121, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor nav ul li #linkProductos {
+  color: #D9662D;
+}
+
+/* line 125, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor nav ul li:hover {
+  font-weight: bold;
+  transform: scale(1.25, 1.25);
+  text-shadow: rgba(217, 102, 45, 0.75) 2px 2px;
+}
+
+/* line 137, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor aside {
+  background-image: radial-Gradient(center, ellipse, transparent, #5B3396);
+  /* Para que soporte a otros navegadores */
+  background-image: -moz-radial-gradient(center, ellipse, transparent, #5B3396);
+  background-image: -webkit-radial-gradient(center, ellipse, transparent, #5B3396);
+  background-image: -o-radial-gradient(center, ellipse, transparent, #5B3396);
+  /* Prpiedades del borde */
+  border-top: groove 3px #5B3396;
+  border-bottom: groove 3px #B9215A;
+  border-left: groove 6px #5B3396;
+  border-right: groove 6px #B9215A;
+  /* Forma y distribución */
+  display: inline-block;
+  border-radius: 30px;
+  justify-content: center;
+  align-items: center;
+  grid-area: aside;
+  grid-template-areas: "texto texto" "fb ig";
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* line 28, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor aside .imagenRedes {
+  height: 40px;
+  margin: 10px;
+  padding: 10px;
+}
+
+/* line 33, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor aside .imagenRedes:hover {
+  animation-name: anim_redes;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+  animation-timing-function: ease-in-out;
+}
+
+/* line 147, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor aside p {
+  color: #EBC534;
+  font-size: 2rem;
+  font-weight: bold;
+  grid-area: texto;
+  margin-top: 20px;
+}
+
+/* line 155, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor aside #ig {
+  grid-area: ig;
+}
+
+/* line 159, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor aside #fb {
+  grid-area: fb;
+}
+
+/* line 165, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor footer {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 5px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  grid-area: footer;
+}
+
+/* line 175, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor footer span {
+  font-weight: bold;
+  display: inline-block;
+}
+
+/* line 180, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor footer address {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+/* line 185, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor footer address:hover {
+  color: #5B3396;
+}
+
+/* line 191, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor footer a {
+  display: inline-block;
+}
+
+/* line 28, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor footer a .imagenRedes {
+  height: 40px;
+  margin: 10px;
+  padding: 10px;
+}
+
+/* line 33, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor footer a .imagenRedes:hover {
+  animation-name: anim_redes;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+  animation-timing-function: ease-in-out;
+}
+
+/* line 194, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor footer a .imagenRedes {
+  height: 15px;
+}
+
+/* line 201, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor main {
+  font-size: 2rem;
+  background-color: rgba(217, 102, 45, 0.25);
+  border-radius: 30px;
+  text-align: center;
+  grid-area: main;
+}
+
+/* fin etiqueta html */
+/* Estilos comunes a todos los links */
+/* line 218, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+a:link {
+  text-decoration: none;
+  color: #5B3396;
+}
+
+/* line 223, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+a:hover {
+  font-style: italic;
+}
+
+/* line 227, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+a:active {
+  color: #B9215A;
+  font-weight: bold;
+}
+
+/* Animaciones */
+@keyframes anim_redes {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.5);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Mixins */
+/* Estructura */
+/* line 23, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/contacto.scss */
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+/* line 28, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/contacto.scss */
+h2 {
+  font-size: 2rem;
+}
+
+/* line 30, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/contacto.scss */
+h2 span:hover {
+  color: #5B3396;
+}
+
+/* line 35, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/contacto.scss */
+form {
+  border-top: groove 5px #5B3396;
+  border-bottom: groove 5px #B9215A;
+  border-left: groove 10px #5B3396;
+  border-right: groove 10px #B9215A;
+  border-radius: 10px;
+  width: 50%;
+  margin-left: 25%;
+  /* Fondo radial */
+  background-image: radial-Gradient(center, ellipse, transparent, #D9662D);
+  background-image: -moz-radial-gradient(center, ellipse, transparent, #D9662D);
+  background-image: -webkit-radial-gradient(center, ellipse, transparent, #D9662D);
+  background-image: -o-radial-gradient(center, ellipse, transparent, #D9662D);
+  /* Fin fieldset */
+}
+
+/* line 46, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/contacto.scss */
+form fieldset {
+  border-style: none;
+  /* Fin grilla */
+}
+
+/* line 49, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/contacto.scss */
+form fieldset #grilla {
+  justify-self: center;
+  align-self: center;
+  display: grid;
+  grid-template-areas: "legend legend legend legend" "labelnombre tfnombre labelemail tfemail" "labeltelefono tftelefono labeltipocons cbtipocons" "labelconsulta labelconsulta labelconsulta labelconsulta" "textarea textarea textarea textarea" "check labelcheck labelcheck labelcheck" "botonenviar botonenviar botonrecibir botonrecibir";
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr auto 1fr 2fr;
+  align-items: center;
+  row-gap: 10px;
+  /* Fin input */
+  /* Fin .boton */
+  /* Distribución dentro de la grilla */
+  /* Fin posicionamiento dentro de la grilla */
+}
+
+/* line 66, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/contacto.scss */
+form fieldset #grilla legend {
+  font-size: 2.5rem;
+  grid-area: legend;
+  justify-self: center;
+}
+
+/* line 72, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/contacto.scss */
+form fieldset #grilla input {
+  border-top: groove 5px #5B3396;
+  border-bottom: groove 5px #B9215A;
+  border-left: groove 10px #5B3396;
+  border-right: groove 10px #B9215A;
+  display: inline-block;
+  font-family: 'Lobster', cursive, sans-serif;
+  border-width: 3px;
+  border-radius: 3px;
+}
+
+/* line 76, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/contacto.scss */
+form fieldset #grilla .textfield {
+  transition: all 2s;
+}
+
+/* line 80, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/contacto.scss */
+form fieldset #grilla .textfield:focus {
+  transform: scale(1.5);
+}
+
+/* line 86, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/contacto.scss */
+form fieldset #grilla .boton {
+  display: block;
+  transform: scale(1.25);
+  transition: all 2s;
+}
+
+/* line 91, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/contacto.scss */
+form fieldset #grilla .boton:hover {
+  transform: scale(1.5);
+}
+
+/* line 95, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/contacto.scss */
+form fieldset #grilla .boton:active {
+  animation-name: anim_boton;
+  animation-fill-mode: backwards;
+  animation-duration: 2s;
+  animation-delay: 0s;
+}
+
+/* line 104, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/contacto.scss */
+form fieldset #grilla select {
+  border-top: groove 5px #5B3396;
+  border-bottom: groove 5px #B9215A;
+  border-left: groove 10px #5B3396;
+  border-right: groove 10px #B9215A;
+  display: inline-block;
+  font-family: 'Lobster', cursive, sans-serif;
+  border-width: 3px;
+  border-radius: 3px;
+}
+
+/* line 108, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/contacto.scss */
+form fieldset #grilla textarea {
+  border-top: groove 5px #5B3396;
+  border-bottom: groove 5px #B9215A;
+  border-left: groove 10px #5B3396;
+  border-right: groove 10px #B9215A;
+  display: inline-block;
+  font-family: 'Lobster', cursive, sans-serif;
+  border-width: 3px;
+  border-radius: 3px;
+  margin-bottom: 2rem;
+  grid-area: textarea;
+  justify-self: center;
+}
+
+/* line 117, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/contacto.scss */
+form fieldset #grilla #labelnombre {
+  grid-area: labelnombre;
+  justify-self: right;
+}
+
+/* line 122, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/contacto.scss */
+form fieldset #grilla #tfnombre {
+  grid-area: tfnombre;
+  justify-self: left;
+}
+
+/* line 127, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/contacto.scss */
+form fieldset #grilla #labelemail {
+  grid-area: labelemail;
+  justify-self: right;
+}
+
+/* line 132, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/contacto.scss */
+form fieldset #grilla #tfemail {
+  grid-area: tfemail;
+  justify-self: left;
+}
+
+/* line 137, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/contacto.scss */
+form fieldset #grilla #labeltelefono {
+  grid-area: labeltelefono;
+  justify-self: right;
+}
+
+/* line 142, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/contacto.scss */
+form fieldset #grilla #tftelefono {
+  grid-area: tftelefono;
+  justify-self: left;
+}
+
+/* line 147, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/contacto.scss */
+form fieldset #grilla #labeltipocons {
+  grid-area: labeltipocons;
+  justify-self: right;
+}
+
+/* line 152, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/contacto.scss */
+form fieldset #grilla #cbtipocons {
+  grid-area: cbtipocons;
+  justify-self: left;
+}
+
+/* line 157, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/contacto.scss */
+form fieldset #grilla #labelconsulta {
+  grid-area: labelconsulta;
+  justify-self: center;
+}
+
+/* line 162, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/contacto.scss */
+form fieldset #grilla #check {
+  grid-area: check;
+  justify-self: right;
+}
+
+/* line 167, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/contacto.scss */
+form fieldset #grilla #labelcheck {
+  grid-area: labelcheck;
+  justify-self: left;
+}
+
+/* line 172, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/contacto.scss */
+form fieldset #grilla #botonenviar {
+  grid-area: botonenviar;
+  justify-self: center;
+}
+
+/* line 177, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/contacto.scss */
+form fieldset #grilla #botonrecibir {
+  grid-area: botonrecibir;
+  justify-self: center;
+}
+
+/* Fin form */
+/* Animaciones */
+@keyframes anim_boton {
+  100% {
+    transform: scale(3);
+    filter: opacity(0%);
+  }
+}
+
+/*# sourceMappingURL=contacto.css.map */

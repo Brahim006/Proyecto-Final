@@ -1,0 +1,339 @@
+@charset "UTF-8";
+/* Contiene los colores usados dentro de todas las hojas de estilo */
+/* Contiene los colores usados dentro de todas las hojas de estilo */
+/* Mixin que encapsola la estructura base de cajas para el header y aside */
+/* fin estructuraCaja */
+/* mixin para las imágenes con links a las redes sociales */
+/* fin imgRedes */
+/* line 45, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html {
+  font-size: 62.5%;
+  /* Deja las unidades REM en 1 rem = 10px aprox */
+  /* fin body */
+}
+
+/* line 48, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body {
+  background-image: url("../res/fondo.jpg");
+  background-attachment: fixed;
+  font-family: 'Lobster', cursive, sans-serif;
+  text-shadow: rgba(0, 0, 0, 0.5) 2px 2px;
+  /* fin div contenedor */
+}
+
+/* line 54, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10%;
+  /* Distribución en grilla de los elementos */
+  justify-self: center;
+  align-self: center;
+  display: grid;
+  grid-template-areas: "header aside" "nav nav" "main main" "footer footer";
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: 3fr 1fr auto 1fr;
+  gap: 10px 5px;
+  /* fin header */
+  /* fin nav */
+  /* fin aside */
+  /* fin footer */
+}
+
+/* line 71, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor header {
+  background-image: radial-Gradient(center, ellipse, transparent, #5B3396);
+  /* Para que soporte a otros navegadores */
+  background-image: -moz-radial-gradient(center, ellipse, transparent, #5B3396);
+  background-image: -webkit-radial-gradient(center, ellipse, transparent, #5B3396);
+  background-image: -o-radial-gradient(center, ellipse, transparent, #5B3396);
+  /* Prpiedades del borde */
+  border-top: groove 5px #5B3396;
+  border-bottom: groove 5px #B9215A;
+  border-left: groove 10px #5B3396;
+  border-right: groove 10px #B9215A;
+  /* Forma y distribución */
+  display: inline-block;
+  border-radius: 5%;
+  justify-content: center;
+  align-items: center;
+  grid-area: header;
+  display: flex;
+}
+
+/* line 76, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor header img {
+  border-radius: 100%;
+  margin: 0.5%;
+}
+
+/* line 83, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor nav {
+  background-color: rgba(119, 186, 203, 0.75);
+  font-size: 2rem;
+  list-style-position: inside;
+  border-radius: 20px;
+  position: sticky;
+  top: 10px;
+  grid-area: nav;
+  align-items: center;
+}
+
+/* line 93, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor nav ul {
+  list-style-type: disc;
+  list-style-position: inside;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* line 101, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor nav ul li {
+  transition: all 2s;
+}
+
+/* line 104, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor nav ul li #linkInicio {
+  color: #B9215A;
+}
+
+/* line 108, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor nav ul li #linkSobreNosotros {
+  color: #77BACB;
+}
+
+/* line 112, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor nav ul li #linkContacto {
+  color: #EBC534;
+}
+
+/* line 116, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor nav ul li #linkServicios {
+  width: 15%;
+  color: #5B3396;
+}
+
+/* line 121, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor nav ul li #linkProductos {
+  color: #D9662D;
+}
+
+/* line 125, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor nav ul li:hover {
+  font-weight: bold;
+  transform: scale(1.25, 1.25);
+  text-shadow: rgba(217, 102, 45, 0.75) 2px 2px;
+}
+
+/* line 137, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor aside {
+  background-image: radial-Gradient(center, ellipse, transparent, #5B3396);
+  /* Para que soporte a otros navegadores */
+  background-image: -moz-radial-gradient(center, ellipse, transparent, #5B3396);
+  background-image: -webkit-radial-gradient(center, ellipse, transparent, #5B3396);
+  background-image: -o-radial-gradient(center, ellipse, transparent, #5B3396);
+  /* Prpiedades del borde */
+  border-top: groove 3px #5B3396;
+  border-bottom: groove 3px #B9215A;
+  border-left: groove 6px #5B3396;
+  border-right: groove 6px #B9215A;
+  /* Forma y distribución */
+  display: inline-block;
+  border-radius: 30px;
+  justify-content: center;
+  align-items: center;
+  grid-area: aside;
+  grid-template-areas: "texto texto" "fb ig";
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* line 28, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor aside .imagenRedes {
+  height: 40px;
+  margin: 10px;
+  padding: 10px;
+}
+
+/* line 33, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor aside .imagenRedes:hover {
+  animation-name: anim_redes;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+  animation-timing-function: ease-in-out;
+}
+
+/* line 147, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor aside p {
+  color: #EBC534;
+  font-size: 2rem;
+  font-weight: bold;
+  grid-area: texto;
+  margin-top: 20px;
+}
+
+/* line 155, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor aside #ig {
+  grid-area: ig;
+}
+
+/* line 159, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor aside #fb {
+  grid-area: fb;
+}
+
+/* line 165, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor footer {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 5px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  grid-area: footer;
+}
+
+/* line 175, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor footer span {
+  font-weight: bold;
+  display: inline-block;
+}
+
+/* line 180, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor footer address {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+/* line 185, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor footer address:hover {
+  color: #5B3396;
+}
+
+/* line 191, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor footer a {
+  display: inline-block;
+}
+
+/* line 28, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor footer a .imagenRedes {
+  height: 40px;
+  margin: 10px;
+  padding: 10px;
+}
+
+/* line 33, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor footer a .imagenRedes:hover {
+  animation-name: anim_redes;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+  animation-timing-function: ease-in-out;
+}
+
+/* line 194, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor footer a .imagenRedes {
+  height: 15px;
+}
+
+/* line 201, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+html body #contenedor main {
+  font-size: 2rem;
+  background-color: rgba(217, 102, 45, 0.25);
+  border-radius: 30px;
+  text-align: center;
+  grid-area: main;
+}
+
+/* fin etiqueta html */
+/* Estilos comunes a todos los links */
+/* line 218, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+a:link {
+  text-decoration: none;
+  color: #5B3396;
+}
+
+/* line 223, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+a:hover {
+  font-style: italic;
+}
+
+/* line 227, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/_estilo-base.scss */
+a:active {
+  color: #B9215A;
+  font-weight: bold;
+}
+
+/* Animaciones */
+@keyframes anim_redes {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.5);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* line 4, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/sobre-nosotros.scss */
+main {
+  /* fin section */
+}
+
+/* line 8, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/sobre-nosotros.scss */
+main section h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+/* line 13, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/sobre-nosotros.scss */
+main section h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* line 18, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/sobre-nosotros.scss */
+main section #imagenes {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+/* line 24, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/sobre-nosotros.scss */
+main section #imagenes .imgDemostrativa {
+  width: 40%;
+  border-radius: 5%;
+  margin: 5px;
+}
+
+/* line 33, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/sobre-nosotros.scss */
+main section a #mapa {
+  border-radius: 10%;
+  border-top: groove 5px #5B3396;
+  border-bottom: groove 5px #B9215A;
+  border-left: groove 5px #5B3396;
+  border-right: groove 5px #B9215A;
+  transition-duration: 2s;
+}
+
+/* line 41, ../../Users/User/Documents/Diseño web/Curso Web/Proyecto/sass/sobre-nosotros.scss */
+main section a #mapa:hover {
+  transform: translateY(-10%);
+  box-shadow: black 0px 10px 10px;
+}
+
+/* fin main */
+
+/*# sourceMappingURL=sobre-nosotros.css.map */
