@@ -143,33 +143,30 @@ html{
                 
                 align-items: center;
                 justify-content: center;
+                @include estructuraCaja(3px, 30px);
+                @include imgRedes;
+                grid-area: aside;
+                grid-template-areas: 
+                    "texto texto"
+                    "fb ig";
+                grid-template-rows: 1fr 1fr;
+                grid-template-columns: 1fr 1fr;
 
-                div{
-                    @include estructuraCaja(3px, 30px);
-                    @include imgRedes;
-                    grid-area: aside;
-                    grid-template-areas: 
-                        "texto texto"
-                        "fb ig";
-                    grid-template-rows: 1fr 1fr;
-                    grid-template-columns: 1fr 1fr;
+                p{
+                    color: $amarillo-paleta;
+                    font-size: 2rem;
+                    font-weight: bold;
+                    grid-area: texto;
+                    margin-top: 15%;
+                }
 
-                    p{
-                        color: $amarillo-paleta;
-                        font-size: 2rem;
-                        font-weight: bold;
-                        grid-area: texto;
-                        margin-top: 15%;
-                    }
-
-                    #ig{
-                        grid-area: ig;
-                    }
-                    
-                    #fb{
-                        grid-area: fb;
-                        margin-top: 15%;
-                    }
+                #ig{
+                    grid-area: ig;
+                }
+                
+                #fb{
+                    grid-area: fb;
+                    margin-top: 15%;
                 }
 
             } /* fin aside */
