@@ -1,4 +1,6 @@
 @import "colores";
+/* Fuente importada de Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Gelasio&display=swap');
 
 /* Mixin que encapsola la estructura base de cajas para el header y aside */
 @mixin estructuraCaja($proporcion,$bordeRadio) {
@@ -83,6 +85,7 @@ html{
             nav{
                 background-color: rgba(119,186,203,0.75);
                 font-size: 2rem;
+                font-weight: bold;
                 list-style-position: inside;
                 border-radius: 20px;
                 position: sticky;
@@ -101,34 +104,36 @@ html{
                     li{
                         transition: all 2s;
 
-                        #linkInicio{
-                            color: $rosa-paleta;
-                        }
-                        
-                        #linkSobreNosotros{
-                            color: $celeste-paleta;
-                        }
-                        
-                        #linkContacto{
-                            color: $amarillo-paleta;
-                        }
-                        
-                        #linkServicios{
-                            width: 15%;
-                            color: $violeta-paleta;
-                        }
-                        
-                        #linkProductos{
-                            color: $naranja-paleta;
-                        }
-
                         &:hover{
                             font-weight: bold;
                             transform: scale(1.25,1.25);
-                            text-shadow: rgba(217, 102, 45, 0.75) 2px 2px;
+                            text-shadow: rgba(217, 102, 45, 0.5) 2px 2px;
                         }
 
                     }
+
+                    li#linkInicio{
+                        color: $rosa-paleta;
+                    }
+                    
+                    li#linkSobreNosotros{
+                        color: $celeste-paleta;
+                    }
+                    
+                    li#linkContacto{
+                        color: $amarillo-paleta;
+                    }
+                    
+                    li#linkServicios{
+                        width: 15%;
+                        color: $violeta-paleta;
+                    }
+                    
+                    li#linkProductos{
+                        color: $naranja-paleta;
+                    }
+
+
 
                 }
 
