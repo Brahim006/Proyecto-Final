@@ -140,29 +140,35 @@ html{
             } /* fin nav */
 
             aside{
-                @include estructuraCaja(3px, 30px);
-                @include imgRedes;
-                grid-area: aside;
-                grid-template-areas: 
-                    "texto texto"
-                    "fb ig";
-                grid-template-rows: 1fr 1fr;
-                grid-template-columns: 1fr 1fr;
-
-                p{
-                    color: $amarillo-paleta;
-                    font-size: 2rem;
-                    font-weight: bold;
-                    grid-area: texto;
-                    margin-top: 20px;
-                }
-
-                #ig{
-                    grid-area: ig;
-                }
                 
-                #fb{
-                    grid-area: fb;
+                align-items: center;
+                justify-content: center;
+
+                div{
+                    @include estructuraCaja(3px, 30px);
+                    @include imgRedes;
+                    grid-area: aside;
+                    grid-template-areas: 
+                        "texto texto"
+                        "fb ig";
+                    grid-template-rows: 1fr 1fr;
+                    grid-template-columns: 1fr 1fr;
+
+                    p{
+                        color: $amarillo-paleta;
+                        font-size: 2rem;
+                        font-weight: bold;
+                        grid-area: texto;
+                        margin-top: 20px;
+                    }
+
+                    #ig{
+                        grid-area: ig;
+                    }
+                    
+                    #fb{
+                        grid-area: fb;
+                    }
                 }
 
             } /* fin aside */
