@@ -51,7 +51,7 @@ html{
         background-image: url("../res/fondo.jpg");
         background-attachment: fixed;
         font-family: 'Gelasio', serif;
-        text-shadow: rgba(0, 0, 0, 0.25) 2px 2px;
+        text-shadow: rgba(0, 0, 0, 0.25) 1px 1px;
 
         #contenedor{
             
@@ -107,7 +107,7 @@ html{
                         &:hover{
                             font-weight: bold;
                             transform: scale(1.25,1.25);
-                            text-shadow: rgba(217, 102, 45, 0.5) 2px 2px;
+                            text-shadow: rgba(217, 102, 45, 0.5) 1px 1px;
                         }
 
                     }
