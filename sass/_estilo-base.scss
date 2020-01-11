@@ -296,6 +296,7 @@ html{
 
                     li{
                         transition: all 2s;
+                        display: inline;
 
                         &:hover{
                             font-weight: bold;

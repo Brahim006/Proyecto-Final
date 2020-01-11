@@ -26,7 +26,6 @@ main{
         }
 
         #imgDemostrativa{
-            width: 25%;
             border-radius: 10%;
         }
 
@@ -39,7 +38,7 @@ main{
                     border-right: 1px solid $violeta-paleta;
                     border-radius: 20px;
                     .descripcion{
-                        font-size: 1.75rem;
+                        font-size: 1rem;
                         word-spacing: 0.75rem;
                     }
 
