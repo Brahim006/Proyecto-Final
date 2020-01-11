@@ -11,6 +11,45 @@
 
 }
 
+/* Diseño responsivo */
+
+/* Celulares en vertical */
+@media (min-width: 320px) and (max-width: 812px) and (orientation: portrait){
+
+    #imgDemostrativa{
+        border-radius: 10%;
+    }
+
+    table tr td{
+        .descripcion{
+            font-size: 1rem;
+            word-spacing: 0.75rem;
+        }
+    }
+    
+} /* fin diseño para celulares en vertical */
+
+/* laptops y PCs de escritorio */
+@media (min-width: 1366px){
+
+    main section {
+
+        #imgDemostrativa{
+            width: 25%;
+            border-radius: 10%;
+        }
+
+        table tr td{
+            .descripcion{
+                font-size: 1.75rem;
+                word-spacing: 0.75rem;
+            }
+        }
+
+    }
+
+} /* fin diseño laptops y PCs de escritorio */
+
 main{
 
     section{
@@ -18,16 +57,9 @@ main{
         h1,h2{
             font-size: 3rem;
             color: $violeta-paleta;
-
             &:hover{
                 color: $rosa-paleta;
             }
-
-        }
-
-        #imgDemostrativa{
-            width: 25%;
-            border-radius: 10%;
         }
 
         table{
@@ -38,10 +70,6 @@ main{
                     border-bottom: 1px solid $violeta-paleta;
                     border-right: 1px solid $violeta-paleta;
                     border-radius: 20px;
-                    .descripcion{
-                        font-size: 1.75rem;
-                        word-spacing: 0.75rem;
-                    }
 
                     &:hover{
                         @include borde;
