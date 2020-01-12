@@ -18,37 +18,34 @@
     border-right: groove 10px $rosa-paleta;
 }
 
-/* Estructura */
+/* Media queries para diferentes dispositivos */
 
-h1{
-    font-size: 3rem;
-    font-weight: bold;
-}
+/* Celulares en vertical */
+@media (min-width: 320px) and (max-width: 812px) and (orientation: portrait){
 
-h2{
-    font-size: 2rem;
-    span:hover{
-        color: $violeta-paleta;
+
+
+} /* Fin responsive para móviles en vertical */
+
+/* laptops y PCs de escritorio */
+@media (min-width: 1366px){
+
+    h1{
+        font-size: 3rem;
     }
-}
 
-form{
-    @include borde;
-    border-radius: 10px;
-    width: 50%;
-    margin-left: 25%;
-    /* Fondo radial */
-    background-image: radial-Gradient(center, ellipse, transparent, $naranja-paleta);
-    background-image: -moz-radial-gradient(center, ellipse, transparent, $naranja-paleta);
-    background-image: -webkit-radial-gradient(center, ellipse, transparent, $naranja-paleta);
-    background-image: -o-radial-gradient(center, ellipse, transparent, $naranja-paleta);
+    h2{
+        font-size: 2rem;
+    }
 
-    fieldset{
-        border-style: none;
+    form{
 
-        #grilla{
-            justify-self: center;
-            align-self: center;
+        border-radius: 10px;
+        width: 50%;
+        margin-left: 25%;
+
+        fieldset #grilla{
+
             display: grid;
             grid-template-areas: 
                 "legend legend legend legend"
@@ -69,44 +66,11 @@ form{
                 justify-self: center;
             }
 
-            input{
-                @include inputs;
-            } /* Fin input */
-
-            .textfield{
-                
-                transition: all 2s;
-
-                &:focus{
-                    transform: scale(1.5);
-                }
-            
-            }
-
             .boton{
                 display: block;
-                transform: scale(1.25);
-                transition: all 2s;
-
-                &:hover{
-                    transform: scale(1.5);
-                }
-
-                &:active{
-                    animation-name: anim_boton;
-                    animation-fill-mode: backwards;
-                    animation-duration: 2s;
-                    animation-delay: 0s;
-                }
-
-            } /* Fin .boton */
-
-            select{
-                @include inputs;
             }
 
             textarea{
-                @include inputs;
                 margin-bottom: 2rem;
                 grid-area: textarea;
                 justify-self: center;
@@ -177,6 +141,78 @@ form{
             #botonrecibir{
                 grid-area: botonrecibir;
                 justify-self: center;
+            }
+
+        } /* fin grilla */
+
+    } /* fin form */
+
+} /* fin diseño responsivo para laptos y PCs de escritorio */
+
+/* Estructura */
+
+h1{
+    font-weight: bold;
+}
+
+h2{
+    span:hover{
+        color: $violeta-paleta;
+    }
+}
+
+form{
+    @include borde;
+    /* Fondo radial */
+    background-image: radial-Gradient(center, ellipse, transparent, $naranja-paleta);
+    background-image: -moz-radial-gradient(center, ellipse, transparent, $naranja-paleta);
+    background-image: -webkit-radial-gradient(center, ellipse, transparent, $naranja-paleta);
+    background-image: -o-radial-gradient(center, ellipse, transparent, $naranja-paleta);
+
+    fieldset{
+        border-style: none;
+
+        #grilla{
+            justify-self: center;
+            align-self: center;
+
+            input{
+                @include inputs;
+            } /* Fin input */
+
+            .textfield{
+                
+                transition: all 2s;
+
+                &:focus{
+                    transform: scale(1.5);
+                }
+            
+            }
+
+            .boton{
+                transform: scale(1.25);
+                transition: all 2s;
+
+                &:hover{
+                    transform: scale(1.5);
+                }
+
+                &:active{
+                    animation-name: anim_boton;
+                    animation-fill-mode: backwards;
+                    animation-duration: 2s;
+                    animation-delay: 0s;
+                }
+
+            } /* Fin .boton */
+
+            select{
+                @include inputs;
+            }
+
+            textarea{
+                @include inputs;
             }
 
             /* Fin posicionamiento dentro de la grilla */
