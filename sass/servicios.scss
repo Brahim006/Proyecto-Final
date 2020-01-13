@@ -16,16 +16,14 @@
 /* Celulares en vertical */
 @media (min-width: 320px) and (max-width: 812px) and (orientation: portrait){
 
-    #imgDemostrativa{
+    .imgDemostrativa{
         width: 50%;
         border-radius: 10%;
     }
     
-    table tr td{
-        .descripcion{
-            font-size: 1rem;
-            word-spacing: 0.75rem;
-        }
+    table tr td.descripcion{
+        font-size: 1rem;
+        word-spacing: 0.75rem;
     }
     
 } /* fin diseño para celulares en vertical */
@@ -35,7 +33,7 @@
 
     main section {
 
-        #imgDemostrativa{
+        .imgDemostrativa{
             width: 25%;
             border-radius: 10%;
         }
