@@ -19,10 +19,14 @@
     .imgDemostrativa{
         width: 50%;
         border-radius: 10%;
+        transition-duration: 2s;
+        &:hover{
+            transform: scale(1.5);
+        }
     }
     
     table tr td.descripcion{
-        font-size: 1rem;
+        font-size: 1.75rem;
         word-spacing: 0.75rem;
     }
     
@@ -79,7 +83,7 @@ main{
 
         } /* fin table */
 
-        p, ol:hover{
+        p:hover, ol:hover{
 
             @include borde;
 
@@ -88,6 +92,7 @@ main{
         iframe{
             width: 426; 
             height: 240;
+            margin-top: 10px;
             border-radius: 10%;
         }
 
