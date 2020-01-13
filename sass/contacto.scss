@@ -23,6 +23,18 @@
 /* Celulares en vertical */
 @media (min-width: 320px) and (max-width: 812px) and (orientation: portrait){
 
+    h1{
+        font-size: 1rem;
+    }
+
+    h2{
+        font-size: 1rem;
+    }
+
+    img{
+        width: 20px;
+    }
+
     form{
 
         border-radius: 10px;
@@ -58,11 +70,15 @@
 @media (min-width: 1366px){
 
     h1{
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     h2{
-        font-size: 2rem;
+        font-size: 1rem;
+    }
+
+    img{
+        width: 40px;
     }
 
     form{
