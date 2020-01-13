@@ -30,6 +30,9 @@
             main{
 
                 section{
+                    
+                    align-items: center;
+                    justify-content: center;
 
                     h1{
                         font-size: 1rem;
@@ -45,10 +48,7 @@
 
                     form{
                 
-                        border-radius: 10px;
-                        width: 50%;
-                        align-self: center;
-                        justify-self: center;
+                        border-radius: 10p;
                 
                         fieldset #grilla{
                 
@@ -71,7 +71,7 @@
                                 margin-bottom: 2rem;
                             }
                 
-                        } /* fin grilla */
+                            } /* fin grilla */
                     } /* fin form */
 
                 } /* fin section */
