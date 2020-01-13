@@ -23,8 +23,35 @@
 /* Celulares en vertical */
 @media (min-width: 320px) and (max-width: 812px) and (orientation: portrait){
 
+    form{
 
+        border-radius: 10px;
+        width: 50%;
+        align-self: center;
+        justify-self: center;
 
+        fieldset #grilla{
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+
+            legend{
+                font-size: 2.5rem;
+                grid-area: legend;
+            }
+
+            .boton{
+                display: block;
+            }
+
+            textarea{
+                margin-bottom: 2rem;
+            }
+
+        } /* fin grilla */
+    } /* fin form */
 } /* Fin responsive para móviles en vertical */
 
 /* laptops y PCs de escritorio */
@@ -225,11 +252,13 @@ form{
 
 /* Animaciones */
 
-@keyframes anim_boton{
+@keyframes anim_boton {
 
-    100%{
+    100% {
+
         transform: scale(3);
         filter: opacity(0%);
+
     }
 
 }
