@@ -23,48 +23,65 @@
 /* Celulares en vertical */
 @media (min-width: 320px) and (max-width: 812px) and (orientation: portrait){
 
-    h1{
-        font-size: 1rem;
-    }
+    body{
 
-    h2{
-        font-size: 1rem;
-    }
+        #contenedor{
 
-    img{
-        width: 20px;
-    }
+            main{
 
-    form{
+                section{
 
-        border-radius: 10px;
-        width: 50%;
-        align-self: center;
-        justify-self: center;
+                    h1{
+                        font-size: 1rem;
+                    }
+                
+                    h2{
+                        font-size: 1rem;
+                    }
+                
+                    img{
+                        width: 20px;
+                    }
 
-        fieldset #grilla{
+                    form{
+                
+                        border-radius: 10px;
+                        width: 50%;
+                        align-self: center;
+                        justify-self: center;
+                
+                        fieldset #grilla{
+                
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: space-around;
+                
+                            legend{
+                                font-size: 2.5rem;
+                                grid-area: legend;
+                            }
+                
+                            .boton{
+                                display: inline;
+                                margin-top: 10px;
+                            }
+                
+                            textarea{
+                                margin-bottom: 2rem;
+                            }
+                
+                        } /* fin grilla */
+                    } /* fin form */
 
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-around;
+                } /* fin section */
 
-            legend{
-                font-size: 2.5rem;
-                grid-area: legend;
-            }
+            } /* fin main */
 
-            .boton{
-                display: inline;
-                margin-top: 10px;
-            }
+        } /* fin contenedor */
 
-            textarea{
-                margin-bottom: 2rem;
-            }
-
-        } /* fin grilla */
-    } /* fin form */
+    } /* fin body */
+    
 } /* Fin responsive para móviles en vertical */
 
 /* laptops y PCs de escritorio */
