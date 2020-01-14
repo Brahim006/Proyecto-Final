@@ -190,7 +190,7 @@
                         justify-content: space-evenly;
 
                         li{
-                            display: inline-block;
+                            display: block;
                             &:hover{
                                 text-shadow: rgba(217, 102, 45, 0.5) 1px 1px;
                             }
