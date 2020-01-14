@@ -38,10 +38,6 @@
     .imgDemostrativa{
         width: 50%;
         border-radius: 10%;
-        transition-duration: 2s;
-        &:hover{
-            transform: scale(1.5);
-        }
     }
     
     table tr td.descripcion{
