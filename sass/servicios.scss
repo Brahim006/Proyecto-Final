@@ -32,6 +32,25 @@
     
 } /* fin diseño para celulares en vertical */
 
+/* Celulares en horizontal */
+@media (min-width: 320px) and (max-width: 812px) and (orientation: landscape){
+
+    .imgDemostrativa{
+        width: 50%;
+        border-radius: 10%;
+        transition-duration: 2s;
+        &:hover{
+            transform: scale(1.5);
+        }
+    }
+    
+    table tr td.descripcion{
+        font-size: 1.75rem;
+        word-spacing: 0.75rem;
+    }
+    
+} /* fin diseño para celulares en horizontal */
+
 /* laptops y PCs de escritorio */
 @media (min-width: 1366px){
 
