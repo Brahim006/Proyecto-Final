@@ -79,7 +79,7 @@
                     ul{
                         justify-content: space-around;
                         li{
-                        
+                            display: inline;
                             &:hover{
                                 text-shadow: rgba(217, 102, 45, 0.5) 1px 1px;
                             }
@@ -190,7 +190,7 @@
                         justify-content: space-evenly;
 
                         li{
-                        
+                            display: inline-block;
                             &:hover{
                                 text-shadow: rgba(217, 102, 45, 0.5) 1px 1px;
                             }
@@ -307,7 +307,6 @@ html{
 
                     li{
                         transition: all 2s;
-                        display: inline;
 
                         &:hover{
                             font-weight: bold;
