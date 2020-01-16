@@ -1,0 +1,8 @@
+@import "colores";
+@import "estilo-base";
+
+h1{
+    color: $violeta-paleta;
+    font-size: 3rem;
+    font-weight: bold;
+}
