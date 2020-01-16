@@ -7,7 +7,7 @@ div{
     img.imagen-deslizable{
         overflow: hidden;
         box-shadow: 0 10px 20px rgba(0,0,0,0.19);
-        transform: translate(-50%, -50%);
+        transition: all $time_per_slide;
 
         // animación
         animation: come-in-out $slider_complete_cycle infinite forwards;
