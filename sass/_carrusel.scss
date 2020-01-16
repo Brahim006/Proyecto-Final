@@ -1,17 +1,12 @@
-$number_of_slides: 6;
+$number_of_slides: 9;
 $time_per_slide: 2s;
 $slider_complete_cycle: $time_per_slide * $number_of_slides;
 
 div{
 
-    .showcase-slider-container{
-        width: 300px;
-        height: 540px;
-        position: absolute;
+    img.imagen-deslizable{
         overflow: hidden;
         box-shadow: 0 10px 20px rgba(0,0,0,0.19);
-        
-        // CENTRADO
         transform: translate(-50%, -50%);
 
         // animación
@@ -24,19 +19,6 @@ div{
             background: adjust-hue(skyblue, $i * 30deg);
             }
         }
-    }
-
-    img.showcase-slider{
-        height: inherit;
-        position: absolute;
-        top: 0px;
-        background-size: cover;
-        
-        color: white;
-        font-family: Helvetica;
-        font-size: 100px;
-        text-align: center;
-        line-height: 350px;
     }
 }
 
