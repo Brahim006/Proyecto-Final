@@ -1,29 +1,50 @@
 <?php
-    $remitente = $_POST['Prueba php']; // Remitente
-    $destinatario = 'brahimeduali@gmail.com'; // Destinatario.
-    $asunto = 'Consulta página We Colour'; // Asunto
-    if (!$_POST){
-?>
+/* Set e-mail recipient */
+$myemail  = "brahimeduali@gmail.com";
 
-<?php
-}else{
-	 
-    $cuerpo = "Nombre y apellido: " . $_POST["nombre"] . "\r\n"; 
-    $cuerpo .= "Email: " . $_POST["email"] . "\r\n";
-    $cuerpo .= "Número: " . $_POST["telefono"] . "\r\n";
-    $cuerpo .= "Consulta sobre:: " . $_POST["tipoconsulta"] . "\r\n";
-    $cuerpo .= "Consulta: " . $_POST["consulta"] . "\r\n";
-    $cuerpo .= "Recibir notificaciones:: " . $_POST["recibirinfo"] . "\r\n";
+$ip = ($_SERVER['X_FORWARDED_FOR']) ? $_SERVER['X_FORWARDED_FOR'] : $_SERVER['REMOTE_ADDR'];
 
-    $headers  = "MIME-Version: 1.0\n";
-    $headers .= "Content-type: text/plain; charset=utf-8\n";
-    $headers .= "X-Priority: 3\n";
-    $headers .= "X-MSMail-Priority: Normal\n";
-    $headers .= "X-Mailer: php\n";
-    $headers .= "From: \"".$_POST['nombre']." ".$_POST['apellido']."\" <".$remitente.">\n";
+// Tomar datos del formulario, segun los campos, que deben coincidir con lo q tenemos en contacto.html
+$subject .= "Consulta We Coulor Estilistas.";
 
-    mail($destinatario, $asunto, $cuerpo, $headers);
-    
-    include 'confirma.html'; //se debe crear un html que confirma el envío
-}
-?>
+// Los campos
+$nombre = $_REQUEST['nombre'] ;
+$apellido = $_REQUEST['apellido'] ;
+$email = $_REQUEST['email'] ;
+$telefono = $_REQUEST['telefono'];
+$tipo_consulta = $_REQUEST['tipoconsulta'];
+$consulta = $_REQUEST['consulta'] ; 
+$recibir_info = $_REQUEST['recibirinfo'];
+
+/* Poner que información aparecerá en el email, veran que toma las variables depende lo que configuramos mas arriba */
+$message = "Consulta desde la página de We Coulour Estilistas:
+
+Nombre: $nombre
+Apellido: $apellido
+E-Mail: $email
+Número de teléfono: $telefono
+Consulta sobre: $tipo_consulta
+Desea recibir info: $recibir_info
+
+Consulta:
+ $consulta
+
+";
+
+// El resto dejarlo como está!
+//direcci&oacute;n del remitente 
+$headers = "From: $nombre <$email>\r\n"; 
+
+//direcci&oacute;n de respuesta, si queremos que sea distinta que la del remitente 
+$headers .= "Reply-To: $email\r\n"; 
+
+//ruta del mensaje desde origen a destino 
+$headers .= "Return-path: $email\r\n"; 
+
+/* Send the message using mail() function */
+// mail($myemail, "Presupuesto solicitado desde SantiagoAV", $message, $headers);
+mail($myemail, $subject, $message, $headers);
+
+/* Acá podemos modificar que una vez enviado el mail, ir a otro html, por ej de gracias */
+header('Location: confirma.html');
+exit();
