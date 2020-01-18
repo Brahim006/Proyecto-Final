@@ -5,7 +5,7 @@ $myemail  = "brahimeduali@gmail.com";
 $ip = ($_SERVER['X_FORWARDED_FOR']) ? $_SERVER['X_FORWARDED_FOR'] : $_SERVER['REMOTE_ADDR'];
 
 // Tomar datos del formulario, segun los campos, que deben coincidir con lo q tenemos en contacto.html
-$subject .= "Consulta We Coulor Estilistas.";
+$subject = "Consulta We Coulor Estilistas.";
 
 // Los campos
 $nombre = $_REQUEST['tfnombre'] ;
