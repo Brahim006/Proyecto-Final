@@ -8,19 +8,17 @@ $ip = ($_SERVER['X_FORWARDED_FOR']) ? $_SERVER['X_FORWARDED_FOR'] : $_SERVER['RE
 $subject .= "Consulta We Coulor Estilistas.";
 
 // Los campos
-$nombre = $_REQUEST['nombre'] ;
-$apellido = $_REQUEST['apellido'] ;
-$email = $_REQUEST['email'] ;
-$telefono = $_REQUEST['telefono'];
-$tipo_consulta = $_REQUEST['tipoconsulta'];
+$nombre = $_REQUEST['tfnombre'] ;
+$email = $_REQUEST['tfemail'] ;
+$telefono = $_REQUEST['tftelefono'];
+$tipo_consulta = $_REQUEST['cbtipocons'];
 $consulta = $_REQUEST['consulta'] ; 
-$recibir_info = $_REQUEST['recibirinfo'];
+$recibir_info = $_REQUEST['labelcheck'];
 
 /* Poner que información aparecerá en el email, veran que toma las variables depende lo que configuramos mas arriba */
 $message = "Consulta desde la página de We Coulour Estilistas:
 
 Nombre: $nombre
-Apellido: $apellido
 E-Mail: $email
 Número de teléfono: $telefono
 Consulta sobre: $tipo_consulta
