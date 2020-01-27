@@ -40,7 +40,7 @@
 /* Media queries para diferentes dispositivos */
 
 /* Celulares en vertical */
-@media (min-width: 320px) and (max-width: 812px) and (orientation: portrait){
+@media (min-width: 320px) and (max-width: 599px) and (orientation: portrait){
 
     html{
 
@@ -152,7 +152,7 @@
 
 /* Celulares en horizontal */
 
-@media (min-width: 320px) and (max-width: 812px) and (orientation: landscape){
+@media (min-width: 320px) and (max-width: 599px) and (orientation: landscape){
 
     html{
 
@@ -263,7 +263,7 @@
 } /* fin diseño portrait para celulares en horizontal */
 
 /* Tablets en horizontal */
-@media (min-width: 812px) and (max-width: 1023px) and (orientation: portrait){
+@media (min-width: 600px) and (max-width: 1023px) and (orientation: portrait){
 
     html{
 
