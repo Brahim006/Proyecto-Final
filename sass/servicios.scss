@@ -14,7 +14,7 @@
 /* Diseño responsivo */
 
 /* Celulares en vertical */
-@media (min-width: 320px) and (max-width: 812px) and (orientation: portrait){
+@media (min-width: 320px) and (max-width: 1023px) and (orientation: portrait){
 
     .imgDemostrativa{
         width: 50%;
@@ -33,7 +33,7 @@
 } /* fin diseño para celulares en vertical */
 
 /* Celulares en horizontal */
-@media (min-width: 320px) and (max-width: 812px) and (orientation: landscape){
+@media (min-width: 320px) and (max-width: 1023px) and (orientation: landscape){
 
     .imgDemostrativa{
         width: 50%;
@@ -48,7 +48,7 @@
 } /* fin diseño para celulares en horizontal */
 
 /* laptops y PCs de escritorio */
-@media (min-width: 1366px){
+@media (min-width: 1024px){
 
     main section {
 
