@@ -21,7 +21,7 @@
 /* Media queries para diferentes dispositivos */
 
 /* Celulares en vertical */
-@media (min-width: 320px) and (max-width: 812px) and (orientation: portrait){
+@media (min-width: 320px) and (max-width: 599px) and (orientation: portrait){
 
     body{
 
@@ -85,7 +85,7 @@
     
 } /* Fin responsive para móviles en horizontal */
 
-@media (min-width: 320px) and (max-width: 812px) and (orientation: landscape){
+@media (min-width: 320px) and (max-width: 599px) and (orientation: landscape){
 
     body{
 
@@ -148,9 +148,75 @@
     } /* fin body */
     
 } /* Fin responsive para móviles en horizontal */
+
+/* Tablets en vertical */
+
+@media (min-width: 600px) and (max-width: 1023px) and (orientation: portrait){
+
+    body{
+
+        #contenedor{
+
+            main{
+
+                section{
+                    
+                    align-items: center;
+                    justify-content: center;
+
+                    h1{
+                        font-size: 3rem;
+                    }
+                
+                    h2{
+                        font-size: 2rem;
+                    }
+                
+                    img{
+                        width: 40px;
+                    }
+
+                    form{
+                
+                        border-radius: 10px;
+                
+                        fieldset #grilla{
+                
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: space-around;
+                            width: 100%;
+                
+                            legend{
+                                font-size: 2.5rem;
+                                grid-area: legend;
+                            }
+                
+                            .boton{
+                                display: inline;
+                                margin-top: 10px;
+                            }
+                
+                            textarea{
+                                margin-bottom: 2rem;
+                            }
+                
+                            } /* fin grilla */
+                    } /* fin form */
+
+                } /* fin section */
+
+            } /* fin main */
+
+        } /* fin contenedor */
+
+    } /* fin body */
+
+} /* Fin diseño para tablets en vertical */
 
 /* laptops y PCs de escritorio */
-@media (min-width: 813px){
+@media (min-width: 1024px){
 
     body{
 
