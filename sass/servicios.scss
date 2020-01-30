@@ -48,20 +48,30 @@
 } /* fin diseño para celulares en horizontal */
 
 /* laptops y PCs de escritorio */
-@media (min-width: 600px){
+@media (min-width: 1024px){
 
     main section {
-
-        .imgDemostrativa{
-            width: 25%;
-            border-radius: 10%;
-        }
 
         table tr td{
             .descripcion{
                 font-size: 1.75rem;
                 word-spacing: 0.75rem;
             }
+        }
+
+        #babylights, #balayage, #fantasia, #totalColor, #peinado, #maquillado, #manicura{
+
+            .imgDemostrativa{
+                width: 788px;
+                border-radius: 10%;
+                margin-left: 30px;
+            }
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
         }
 
     }
