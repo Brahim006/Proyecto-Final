@@ -83,14 +83,12 @@
                             &:hover{
                                 text-shadow: rgba(217, 102, 45, 0.5) 1px 1px;
                             }
-    
-                            li#linkInicio, li#linkContacto{
-                                width: 15%;
-                            }
+                        }
+
+                        li#linkInicio, li#linkContacto{
+                            margin-right: 10%;
                         }
                     }
-
-                    
 
                 } /* fin nav */
 
