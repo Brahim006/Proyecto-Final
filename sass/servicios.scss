@@ -33,7 +33,7 @@
 } /* fin diseño para celulares en vertical */
 
 /* Celulares en horizontal */
-@media (min-width: 320px) and (max-width: 1023px) and (orientation: landscape){
+@media (min-width: 600px) and (max-width: 900px) and (orientation: landscape){
 
     .imgDemostrativa{
         width: 50%;
