@@ -85,6 +85,7 @@
     
 } /* Fin responsive para móviles en horizontal */
 
+/* Celulares en horizontal */
 @media (min-width: 600px) and (max-width: 900px) and (orientation: landscape){
 
     body{
@@ -150,7 +151,6 @@
 } /* Fin responsive para móviles en horizontal */
 
 /* Tablets en vertical */
-
 @media (min-width: 600px) and (max-width: 1023px) and (orientation: portrait){
 
     body{
@@ -225,7 +225,7 @@
             main{
 
                 section{
-
+                    
                     h1{
                         font-size: 3rem;
                     }
@@ -241,8 +241,10 @@
                     form{
                 
                         border-radius: 10px;
-                        width: 50%;
-                        margin-left: 25%;
+                        width: min-content;
+                        display: inline-block;
+                        justify-self: center;
+                        margin-bottom: 50px;
                 
                         fieldset #grilla{
                 
