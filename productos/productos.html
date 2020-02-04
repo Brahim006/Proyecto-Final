@@ -51,17 +51,39 @@
         </aside>
         <!--Fin aside-->
         <main><!--Inicio sección principal de la página-->
-            <div><!--Inicio carrusel para productos capilares-->
-                <img src="res/absolute-repair.jpg" alt="Imagen ilustrativa absulute repair" class="imagen-deslizable">
-                <img src="res/anti-rotura.jpg" alt="Imagen ilustrativa anti rotura" class="imagen-deslizable">
-                <img src="res/crema-rulos.jpg" alt="Imagen ilustrativa crema para rulos" class="imagen-deslizable">
-                <img src="res/enriquecedor.jpg" alt="Imagen ilustrativa enriquecedor capilar" class="imagen-deslizable">
-                <img src="res/kit-loreal.jpg" alt="Imagen ilustrativa del kit loreal" class="imagen-deslizable">
-                <img src="res/matizadores.jpg" alt="Imagen ilustrativa matizadores para cabello" class="imagen-deslizable">
-                <img src="res/olaplex.jpg" alt="Imagen ilustrativa olaplex" class="imagen-deslizable">
-                <img src="res/pro-fiber.jpg" alt="Imagen ilustrativa pro fiber" class="imagen-deslizable">
-                <img src="res/tratamiento-intensivo.jpg" alt="Imagen ilustrativa de crema de tratamiento intensivo" class="imagen-deslizable">
-            </div><!--Fin carrusel para productos capilares-->
+            <!--Carrusel para productos capilares-->
+            <img name="carruselCapilares" src="res/absolute-repair.jpg"
+            alt="Deslizador de imágenes sobre productos capilares">
+            <script>
+                window.addEventListener('load',function() {
+                    var imagenes = [];
+
+                    imagenes[0] = "res/absolute-repair.jpg";
+                    imagenes[1] = "res/anti-rotura.jpg";
+                    imagenes[2] = "res/crema-rulos.jpg";
+                    imagenes[3] = "res/enriquecedor.jpg";
+                    imagenes[4] = "res/kit-loreal.jpg";
+                    imagenes[5] = "res/matizadores.jpg";
+                    imagenes[6] = "res/olaplex.jpg";
+                    imagenes[7] = "res/pro-fiber.jpg";
+                    imagenes[8] = "res/tratamiento-intensivo.jpg";
+
+                    var i = 0;
+
+                    function deslizarImagenes(){
+
+                        document.carruselCapilares.src = imagenes[i];
+
+                        if(i < 8){ i++; }
+                        else { i = 0 }
+
+                    }
+
+                    setInterval(deslizarImagenes, 2000);
+
+                });
+            </script>
+            <!--Fin carrsel para productos capilares-->
         </main><!--Fin sección principal de la página-->
         <footer>
             <!--Inicio pie de página-->
