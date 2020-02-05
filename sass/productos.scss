@@ -1,9 +1,86 @@
 /* Hoja de estilos para la sección de productos */
 
 @import "estilo-base";
-@import "carrusel";
+@import "colores";
+
+@mixin borde {
+    
+    border-radius: 20px;
+    background-image: radial-Gradient(center, ellipse, transparent, $naranja-paleta);
+    background-image: -moz-radial-gradient(center, ellipse, transparent, $naranja-paleta);
+    background-image: -webkit-radial-gradient(center, ellipse, transparent, $naranja-paleta);
+    background-image: -moz-radial-gradient(center, ellipse, transparent, $naranja-paleta);
+
+}
+
+/* Estilo para celulares en horizontal */
+@media (min-width: 360px){
+
+    body{
+        main{
+            h1{
+                font-size: 3rem;
+            }
+        
+            #capilares img, #nuskin img{
+                width: 50%;
+            }
+        }
+    }
+
+} /* Fin diseño para móviles en horizontal */
+
+/* Estilo para laptos, PCs, tablets y móviles en landscape */
+@media (min-width: 640px){
+
+    body{
+        main{
+            h1{
+                font-size: 3rem;
+            }
+        
+            #capilares, #nuskin{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                align-content: center;
+                justify-items: center;
+                margin-left: 5%;
+                margin-right: 5%;
+            }
+
+            #capilares img{
+                width: 300px;
+            }
+
+            #nuskin img{
+                width: 500px;
+            }
+
+        }
+    }
+
+} /* fin diseño laptops, PCs, tablets y móviles en landscape  */
 
 h1{
-    font-size: 3rem;
     font-weight: bold;
+    color: $violeta-paleta;
+}
+
+h2:hover{
+    color: $violeta-paleta;
+}
+
+#capilares, #nuskin{
+    img{
+        border-radius: 10%;
+        box-shadow: rgba(0,0,0,0.5) 5px 5px;
+        border-style: solid;
+    }
+    p{
+        display: inline-block;
+        &:hover{
+            @include borde;
+        }
+    }
 }

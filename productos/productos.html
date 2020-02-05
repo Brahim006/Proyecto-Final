@@ -53,7 +53,7 @@
         <main><!--Inicio sección principal de la página-->
             <!--Carrusel para productos capilares-->
             <h1>Línea de productos capilares</h1>
-            <div id="capilares">
+            <div id="capilares" name="capilares">
                 <p>
                     Contamos con una una amplia selección de productos de cuidado y fortalecimiento 
                     capilar, los cuales se encuentran a disposición del público en nuestro local.
@@ -62,8 +62,8 @@
                 <img name="carruselCapilares" src="res/absolute-repair.jpg"
                 alt="Deslizador de imágenes sobre productos capilares">
             </div>
-            <div id="Nuskin">
-                <h1>Línea Nu Skin</h1>
+            <h1>Línea Nu Skin</h1>
+            <div id="nuskin" name="nuskin">
                 <p>
                     Nu Skin es una empresa de alcance mundial especializada en productos de belleza con la 
                     cual empezamos a trabajar recientemente, ¡no dudes en en checkear esta exelente línea de 
@@ -107,8 +107,8 @@
 
                     function deslizarImagenes(){
 
-                        document.carruselCapilares.src = imagenesProd[i];
-                        document.carruselNuskin.src = imagenesNus[i];
+                        var divCap = document.createElement("div");
+                        
 
                         if(i < 8){ i++; }
                         else { i = 0; }
