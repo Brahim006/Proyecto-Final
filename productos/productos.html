@@ -78,6 +78,7 @@
                 <a href="../contacto/contacto.html" target="_blank">consulta</a> sobre cualquier producto que 
                 haya llamado tu atención!
             </p>
+            <!--JavaScript para el carrusel-->
             <script>
                 window.addEventListener('load',function() {
                     var imagenesProd = [];
@@ -107,8 +108,9 @@
 
                     function deslizarImagenes(){
 
-                        var divCap = document.createElement("div");
-                        
+                        var imagenes = document.getElementsByTagName('img');
+                        imagenes[3].src = imagenesProd[i];
+                        imagenes[4].src = imagenesNuskin[i];
 
                         if(i < 8){ i++; }
                         else { i = 0; }
