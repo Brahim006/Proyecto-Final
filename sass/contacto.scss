@@ -3,6 +3,7 @@
 
 /* Mixins */
 
+/* Mixin para estilo de os elementos "input" */
 @mixin inputs {
     @include borde;
     display: inline-block;
@@ -11,6 +12,7 @@
     border-radius: 3px;
 }
 
+/* Mixin para los bordes de las cajas */
 @mixin borde {
     border-top: groove 5px $violeta-paleta;
     border-bottom: groove 5px $rosa-paleta;
@@ -18,200 +20,87 @@
     border-right: groove 10px $rosa-paleta;
 }
 
+/* Mixin para evitar la duplicación de código */
+@mixin codigoBase($fsh1,$fsh2,$imgwth){
+
+    /* descripción de las variables 
+        $fsh1 = font-size para section h1
+        $fsh2 = idem para section h2
+        $imgwth = ancho de la imagen de whatsapp
+    */
+
+    section{
+
+        align-items: center;
+        justify-content: center;
+
+        h1{
+            font-size: $fsh1;
+        }
+
+        h2{
+            font-size: $fsh2;
+        }
+
+        img{
+            width: $imgwth;
+        }
+
+        form{
+
+            border-radius: 10px;
+
+            fieldset #grilla{
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                width: 100%;
+
+                legend{
+                    font-size: 2.5rem;
+                    grid-area: legend;
+                }
+    
+                .boton{
+                    display: inline;
+                    margin-top: 10px;
+                }
+    
+                textarea{
+                    margin-bottom: 2rem;
+                }
+    
+
+            } /* Fin grilla */
+
+        } /* Fin form */
+
+    } /* Fin section */
+
+}
+
 /* Media queries para diferentes dispositivos */
 
 /* Celulares en vertical */
 @media (min-width: 320px) and (max-width: 599px) and (orientation: portrait){
 
-    body{
-
-        #contenedor{
-
-            main{
-
-                section{
-                    
-                    align-items: center;
-                    justify-content: center;
-
-                    h1{
-                        font-size: 1rem;
-                    }
-                
-                    h2{
-                        font-size: 1rem;
-                    }
-                
-                    img{
-                        width: 20px;
-                    }
-
-                    form{
-                
-                        border-radius: 10px;
-                
-                        fieldset #grilla{
-                
-                            display: flex;
-                            flex-direction: column;
-                            align-items: center;
-                            justify-content: space-around;
-                            width: 100%;
-                
-                            legend{
-                                font-size: 2.5rem;
-                                grid-area: legend;
-                            }
-                
-                            .boton{
-                                display: inline;
-                                margin-top: 10px;
-                            }
-                
-                            textarea{
-                                margin-bottom: 2rem;
-                            }
-                
-                            } /* fin grilla */
-                    } /* fin form */
-
-                } /* fin section */
-
-            } /* fin main */
-
-        } /* fin contenedor */
-
-    } /* fin body */
+    @include codigoBase(2rem, 2rem, 30px);
     
 } /* Fin responsive para móviles en horizontal */
 
 /* Celulares en horizontal */
 @media (min-width: 600px) and (max-width: 900px) and (orientation: landscape){
 
-    body{
-
-        #contenedor{
-
-            main{
-
-                section{
-                    
-                    align-items: center;
-                    justify-content: center;
-
-                    h1{
-                        font-size: 1.5rem;
-                    }
-                
-                    h2{
-                        font-size: 1.5rem;
-                    }
-                
-                    img{
-                        width: 30px;
-                    }
-
-                    form{
-                
-                        border-radius: 10px;
-                
-                        fieldset #grilla{
-                
-                            display: flex;
-                            flex-direction: column;
-                            align-items: center;
-                            justify-content: space-around;
-                            width: 100%;
-                
-                            legend{
-                                font-size: 2.5rem;
-                                grid-area: legend;
-                            }
-                
-                            .boton{
-                                display: inline;
-                                margin-top: 10px;
-                            }
-                
-                            textarea{
-                                margin-bottom: 2rem;
-                            }
-                
-                            } /* fin grilla */
-                    } /* fin form */
-
-                } /* fin section */
-
-            } /* fin main */
-
-        } /* fin contenedor */
-
-    } /* fin body */
+    @include codigoBase(1.5rem, 1.5rem, 30px);
     
 } /* Fin responsive para móviles en horizontal */
 
 /* Tablets en vertical */
 @media (min-width: 600px) and (max-width: 1023px) and (orientation: portrait){
 
-    body{
-
-        #contenedor{
-
-            main{
-
-                section{
-                    
-                    align-items: center;
-                    justify-content: center;
-
-                    h1{
-                        font-size: 3rem;
-                    }
-                
-                    h2{
-                        font-size: 2rem;
-                    }
-                
-                    img{
-                        width: 40px;
-                    }
-
-                    form{
-                
-                        border-radius: 10px;
-                
-                        fieldset #grilla{
-                
-                            display: flex;
-                            flex-direction: column;
-                            align-items: center;
-                            justify-content: space-around;
-                            width: 100%;
-                
-                            legend{
-                                font-size: 2.5rem;
-                                grid-area: legend;
-                            }
-                
-                            .boton{
-                                display: inline;
-                                margin-top: 10px;
-                            }
-                
-                            textarea{
-                                margin-bottom: 2rem;
-                            }
-                
-                            } /* fin grilla */
-                    } /* fin form */
-
-                } /* fin section */
-
-            } /* fin main */
-
-        } /* fin contenedor */
-
-    } /* fin body */
+    @include codigoBase(3rem, 2rem, 40px);
 
 } /* Fin diseño para tablets en vertical */
 
